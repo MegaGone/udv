@@ -53,6 +53,8 @@ print(f'El Primer resultado es de tipo { type(int(width)/2).__name__ }: ',  int(
 print(f'El Segundo resultado es de tipo { type(int(width)/2.0).__name__ }: ', int(width)/2.0)
 print(f'El Tercer resultado es de tipo { type(int(height)/3).__name__ }: ',  int(height)/3)
 print(f'El Cuarto resultado es de tipo { type(1 + 2 * 5).__name__ }: ', 1 + 2 * 5)
+print('\nHecho por Jimmy Martinez - Carné No. 202302745')
+input("Presione enter para salir...")
 
 ## Jimmy Martinez - Carné No. 202302745
 ## REPO - https://github.com/MegaGone/udv/blob/develop/fundamentos_I/exerciseI.py
