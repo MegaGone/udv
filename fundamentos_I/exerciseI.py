@@ -55,3 +55,4 @@ print(f'El Tercer resultado es de tipo { type(int(height)/3).__name__ }: ',  int
 print(f'El Cuarto resultado es de tipo { type(1 + 2 * 5).__name__ }: ', 1 + 2 * 5)
 
 ## Jimmy Martinez - Carné No. 202302745
+## REPO - https://github.com/MegaGone/udv/blob/develop/fundamentos_I/exerciseI.py
