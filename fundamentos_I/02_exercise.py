@@ -57,4 +57,4 @@ print('\nHecho por Jimmy Martinez - Carné No. 202302745')
 input("Presione enter para salir...")
 
 ## Jimmy Martinez - Carné No. 202302745
-## REPO - https://github.com/MegaGone/udv/blob/develop/fundamentos_I/exerciseI.py
+## REPO - https://github.com/MegaGone/udv/blob/develop/fundamentos_I/02_exercise.py
