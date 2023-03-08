@@ -1,8 +1,16 @@
 # INICIO CALCULAR_FECHAS
 # declarar int_days, int_months, int_years, int_maxdaysbyyear = 365, int_maxdaysbymonth = 30
-# Imprimir "Ingrese la cantidad de días que desea convertir: "
-# Leer int_days
-# 
+#
+# Repetir mientras int_days no sea un numero válido
+#
+# intentar:
+#   Imprimir "Ingrese la cantidad de días que desea convertir: "
+#   Leer int_days
+#   salir del ciclo
+#
+# excepto DíasNoVálidos:
+# Imprimir "Días no válidos. Intente de nuevo"
+#
 # int_years = int(int_days / int_maxdaysbyyear)
 # int_days -= int_years * int_maxdaysbyyear
 # int_months = int(int_days / int_maxdaysbymonth)
