@@ -25,7 +25,7 @@ while True:
     except ValueError:
         print("Número no válido. Ingrese otro número")
 
-if int_numero % 2 == 0:
+if ((int_numero % 2) == 0):
     print("El número es par.")
 else:
     print("El número es impar.")
