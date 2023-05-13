@@ -20,7 +20,7 @@ def obtener_palabra():
         palabras = str_palabra.split()
 
         if all(palabra.isalpha() for palabra in palabras) and all(len(palabra) > 1 for palabra in str_palabra.split(" ")):
-            return str_palabra
+            return str_palabra.lower()
         else:
             print("[ERROR] La palabra solo puede contener letras y los espacios no deben ser más de 1 seguido.")
 
@@ -51,3 +51,21 @@ def validar_letra(str_letra, str_palabra):
         str_letra = str_letra.lower()
         if str_letra in str_palabra:
             return True
+
+def comparar_letras(letra, palabra, palabra_oculta):
+    nueva_palabra_oculta = ""
+    for i in range(len(palabra)):
+        if palabra[i] == letra:
+            nueva_palabra_oculta += letra + " "
+        else:
+            nueva_palabra_oculta += palabra_oculta[i*2:i*2+2]
+    return nueva_palabra_oculta.strip()
+
+def validar_palabras(str_palabra_oculta, str_palabra):
+    str_palabra_oculta = ''.join(str_palabra_oculta.split())
+    str_palabra = ''.join(str_palabra.split())
+
+    if str_palabra_oculta == str_palabra:
+        return True
+    else:
+        return False
