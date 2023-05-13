@@ -1,0 +1,1 @@
+{"JUGADOR": "test", "PALABRA": "test", "CATEGORÍA": "test", "ESTADO": "Adivinada", "FECHA": "2023-05-13 12:31:32"}

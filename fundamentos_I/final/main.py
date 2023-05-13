@@ -1,14 +1,29 @@
 import sys
-from helpers.functions import obtener_palabra, obtener_categoria, mostrar_guiones, mostrar_detalles, mostrar_menu, validar_letra, comparar_letras, validar_palabras, limpiar_consola, mostrar_figura
+from helpers.functions import (
+    obtener_palabra, 
+    obtener_categoria, 
+    mostrar_guiones, 
+    mostrar_detalles, 
+    mostrar_menu, 
+    validar_letra, 
+    comparar_letras, 
+    validar_palabras, 
+    limpiar_consola, 
+    mostrar_figura, 
+    obtener_jugador,
+    crear_registro
+)
 
 while True:
     int_opcion = mostrar_menu()
     int_intentos = 6
     str_letra = ""
+    bool_palabra_adivinada = False
 
     if int_opcion == 1:    
         str_palabra = obtener_palabra()
         str_categoria = obtener_categoria()
+        str_nombre_jugador = obtener_jugador()
         str_palabra_oculta = mostrar_guiones(str_palabra)
         print(str_palabra_oculta)
         mostrar_detalles(str_palabra, str_categoria, int_intentos)
@@ -30,10 +45,12 @@ while True:
 
                     if bool_palabra_adivinada == True:
                         print("FELICIDADES, HA ADIVINADO LA PALABRA")
+                        crear_registro(str_nombre_jugador, str_palabra, str_categoria , bool_palabra_adivinada)
                         break
             else:
-                print("JUEGO TERMINADO")
+                print("JUEGO TERMINADO.")
                 print(f"LA PALABRA CORRECTA ERA: { str_palabra }")
+                crear_registro(str_nombre_jugador, str_palabra, str_categoria, bool_palabra_adivinada)
                 break
 
     elif int_opcion == 2:

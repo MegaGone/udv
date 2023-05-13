@@ -1,6 +1,8 @@
 import pwinput
 import re
 import os
+import datetime
+import json
 
 def mostrar_menu():
     print("******************* AHORCADO UDV *******************")
@@ -142,3 +144,30 @@ def mostrar_figura(intentos):
         """
     ]
     print(figura[::-1][intentos])
+
+def obtener_jugador():
+    while True:
+        str_nombre_jugador = input("INGRESE SU NOMBRE DE JUGADOR: ")
+        str_espacios = str_nombre_jugador.replace(" ", "")
+
+        if len(str_nombre_jugador) == len(str_espacios):
+            return str_nombre_jugador
+        else:
+            print("[ERROR] EL NOMBRE DE JUGADOR NO PUEDE CONTENER ESPACIOS.")
+
+def crear_registro(str_nombre_jugador, str_palabra, str_categoria, bool_palabra_adivinada):
+    fecha_hora_actual = datetime.datetime.now()
+
+    obj_registro = {
+        "JUGADOR": str_nombre_jugador,
+        "PALABRA": str_palabra,
+        "CATEGORÍA": str_categoria,
+        "ESTADO": "Adivinada" if bool_palabra_adivinada else "No Adivinada",
+        "FECHA": fecha_hora_actual.strftime("%Y-%m-%d %H:%M:%S")
+    }
+
+    guardar_registro(obj_registro)
+
+def guardar_registro(obj_registro):
+    with open("historial_udv.txt", "w", encoding="utf-8") as archivo:
+        archivo.write(json.dumps(obj_registro, ensure_ascii=False))
