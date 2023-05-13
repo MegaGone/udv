@@ -39,11 +39,11 @@ def obtener_categoria():
         else:
             print("[ERROR] LA CATEGORÍA SOLO PUEDE CONTENER LETRAS.")
 
-def mostrar_guiones(palabra):
-    guiones = "\n"
-    for letra in palabra:
-        guiones += "_ "
-    return guiones
+def mostrar_guiones(str_palabra):
+    str_guiones = "\n"
+    for letra in str_palabra:
+        str_guiones += "_ "
+    return str_guiones
 
 def mostrar_detalles(str_palabra, str_categoria, int_intentos):
     print(f"\nLetras: { len(str_palabra) }")
@@ -58,11 +58,11 @@ def validar_letra(str_letra, str_palabra):
         if str_letra in str_palabra:
             return True
 
-def comparar_letras(letra, palabra, palabra_oculta):
+def comparar_letras(str_letra, str_palabra, palabra_oculta):
     nueva_palabra_oculta = ""
-    for i in range(len(palabra)):
-        if palabra[i] == letra:
-            nueva_palabra_oculta += letra + " "
+    for i in range(len(str_palabra)):
+        if str_palabra[i] == str_letra:
+            nueva_palabra_oculta += str_letra + " "
         else:
             nueva_palabra_oculta += palabra_oculta[i*2:i*2+2]
     return nueva_palabra_oculta.strip()
@@ -79,8 +79,8 @@ def validar_palabras(str_palabra_oculta, str_palabra):
 def limpiar_consola():
     os.system('cls')
 
-def mostrar_figura(intentos):
-    figura = [
+def mostrar_figura(int_intento):
+    str_figura = [
         """
           ____
          |    |
@@ -145,7 +145,7 @@ def mostrar_figura(intentos):
         _|_
         """
     ]
-    print(figura[::-1][intentos])
+    print(str_figura[::-1][int_intento])
 
 def obtener_jugador():
     while True:
