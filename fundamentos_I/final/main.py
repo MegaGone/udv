@@ -1,5 +1,5 @@
 import sys
-from helpers.functions import obtener_palabra, obtener_categoria, mostrar_guiones, mostrar_detalles, mostrar_menu, validar_letra, comparar_letras, validar_palabras, limpiar_consola
+from helpers.functions import obtener_palabra, obtener_categoria, mostrar_guiones, mostrar_detalles, mostrar_menu, validar_letra, comparar_letras, validar_palabras, limpiar_consola, mostrar_figura
 
 while True:
     int_opcion = mostrar_menu()
@@ -15,11 +15,12 @@ while True:
 
         while True:
             if int_intentos > 0:
-                str_letra = input("Ingrese una letra: ")
+                str_letra = input("INGRESE UNA LETRA: ")
                 bool_letra_en_palabra = validar_letra(str_letra, str_palabra)
 
                 if bool_letra_en_palabra != True:
                     int_intentos -= 1
+                    mostrar_figura(int_intentos)
                     mostrar_detalles(str_palabra, str_categoria, int_intentos)
                 else:
                     str_palabra_oculta = comparar_letras(str_letra, str_palabra, str_palabra_oculta)
@@ -28,15 +29,16 @@ while True:
                     mostrar_detalles(str_palabra, str_categoria, int_intentos)
 
                     if bool_palabra_adivinada == True:
-                        print("Felicidades, ha adivinado la palabra")
+                        print("FELICIDADES, HA ADIVINADO LA PALABRA")
                         break
             else:
-                print(f"Ooops! Se ha quedado sin intentos, la palabra correcta era: { str_palabra }")
+                print("JUEGO TERMINADO")
+                print(f"LA PALABRA CORRECTA ERA: { str_palabra }")
                 break
 
     elif int_opcion == 2:
-        print("Gracias por jugar!")
-        input("Presione enter para cerrar el programa...")
+        print("GRACIAS POR JUGAR!")
+        input("PRESIONE ENTER PARA CERRAR EL PROGRAMA...")
         sys.exit()
 
     elif int_opcion == 3:

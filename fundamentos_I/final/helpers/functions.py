@@ -4,35 +4,36 @@ import os
 
 def mostrar_menu():
     print("******************* AHORCADO UDV *******************")
-    print("1. Iniciar nueva partida")
-    print("2. Salir del juego")
-    print("3. Limpiar consola")
+    print("1. INICIAR UNA NUEVA PARTIDA")
+    print("2. SALIR DEL JUEGO")
+    print("3. LIMPIAR CONSOLA")
+    print("****************************************************")
 
     try:
-        int_option = int(input("Seleccione una opción: "))
+        int_option = int(input("SELECCIONE UNA OPCIÓN: "))
         if int_option > 0 and int_option < 4:
             return int_option
         else:
-            print("[ERROR] La opción seleccionada no es válida.\n")
+            print("[ERROR] LA OPCIÓN SELECCIONADA NO ES VÁLIDA.\n")
     except ValueError:
-        print("[ERROR] La opción debe ser un número entero positivo.\n")
+        print("[ERROR] LA OPCIÓN DEBE SER UN NÚMERO ENTERO POSITIVO.\n")
 
 def obtener_palabra():
     while True:
-        str_palabra = pwinput.pwinput(prompt='\nIngrese la palabra a adivinar: ')
+        str_palabra = pwinput.pwinput(prompt='\nINGRESE LA PALABRA A ADIVINAR: ')
 
         if re.match("^[a-zA-Z]+$", str_palabra):
             return str_palabra.lower()
         else:
-            print("[ERROR] La palabra solo puede contener letras")
+            print("[ERROR] LA PALABRA SOLO PUEDE CONTENER LETRAS.")
 
 def obtener_categoria():
     while True:
-        str_categoria = input("Ingrese la categoría a la cuál pertenece la palabra: ")
+        str_categoria = input("INGRESE LA CATEGORÍA A LA CUÁL PERTENECE LA PALABRA: ")
         if str_categoria.isalpha():
             return str_categoria
         else:
-            print("[ERROR] La categoría solo puede contener letras.")
+            print("[ERROR] LA CATEGORÍA SOLO PUEDE CONTENER LETRAS.")
 
 def mostrar_guiones(palabra):
     guiones = "\n"
@@ -73,3 +74,71 @@ def validar_palabras(str_palabra_oculta, str_palabra):
     
 def limpiar_consola():
     os.system('cls')
+
+def mostrar_figura(intentos):
+    figura = [
+        """
+          ____
+         |    |
+         |    
+         |    
+         |    
+         |    
+        _|_
+        """,
+        """
+          ____
+         |    |
+         |    O
+         |    
+         |    
+         |    
+        _|_
+        """,
+        """
+          ____
+         |    |
+         |    O
+         |    |
+         |    
+         |    
+        _|_
+        """,
+        """
+          ____
+         |    |
+         |    O
+         |   /|
+         |    
+         |    
+        _|_
+        """,
+        """
+          ____
+         |    |
+         |    O
+         |   /|\\
+         |    
+         |    
+        _|_
+        """,
+        """
+          ____
+         |    |
+         |    O
+         |   /|\\
+         |   / 
+         |    
+        _|_
+        """,
+        """
+          ____
+         |    |
+         |    O
+         |   /|\\
+         |   / \\
+         |    
+        _|_
+        """
+    ]
+    print(figura[::-1][intentos])
