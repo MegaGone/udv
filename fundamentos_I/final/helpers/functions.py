@@ -1,13 +1,16 @@
 import pwinput
+import re
+import os
 
 def mostrar_menu():
     print("******************* AHORCADO UDV *******************")
     print("1. Iniciar nueva partida")
     print("2. Salir del juego")
+    print("3. Limpiar consola")
 
     try:
         int_option = int(input("Seleccione una opción: "))
-        if int_option > 0 and int_option < 3:
+        if int_option > 0 and int_option < 4:
             return int_option
         else:
             print("[ERROR] La opción seleccionada no es válida.\n")
@@ -17,12 +20,11 @@ def mostrar_menu():
 def obtener_palabra():
     while True:
         str_palabra = pwinput.pwinput(prompt='\nIngrese la palabra a adivinar: ')
-        palabras = str_palabra.split()
 
-        if all(palabra.isalpha() for palabra in palabras) and all(len(palabra) > 1 for palabra in str_palabra.split(" ")):
+        if re.match("^[a-zA-Z]+$", str_palabra):
             return str_palabra.lower()
         else:
-            print("[ERROR] La palabra solo puede contener letras y los espacios no deben ser más de 1 seguido.")
+            print("[ERROR] La palabra solo puede contener letras")
 
 def obtener_categoria():
     while True:
@@ -44,8 +46,7 @@ def mostrar_detalles(str_palabra, str_categoria, int_intentos):
     print(f"Intentos disponibles: { int_intentos }\n")
 
 def validar_letra(str_letra, str_palabra):
-    # if len(str_letra) > 1 or not str_letra.isalpha():
-    if len(str_letra) > 1:
+    if len(str_letra) > 1 or not str_letra.isalpha():
         return False
     else:
         str_letra = str_letra.lower()
@@ -69,3 +70,6 @@ def validar_palabras(str_palabra_oculta, str_palabra):
         return True
     else:
         return False
+    
+def limpiar_consola():
+    os.system('cls')

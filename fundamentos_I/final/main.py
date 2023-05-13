@@ -1,5 +1,5 @@
 import sys
-from helpers.functions import obtener_palabra, obtener_categoria, mostrar_guiones, mostrar_detalles, mostrar_menu, validar_letra, comparar_letras, validar_palabras
+from helpers.functions import obtener_palabra, obtener_categoria, mostrar_guiones, mostrar_detalles, mostrar_menu, validar_letra, comparar_letras, validar_palabras, limpiar_consola
 
 while True:
     int_opcion = mostrar_menu()
@@ -35,5 +35,9 @@ while True:
                 break
 
     elif int_opcion == 2:
-        print("bye")
+        print("Gracias por jugar!")
+        input("Presione enter para cerrar el programa...")
         sys.exit()
+
+    elif int_opcion == 3:
+        limpiar_consola()
