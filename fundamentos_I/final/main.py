@@ -67,3 +67,6 @@ while True:
     elif int_opcion == 4:
         arr_historial = cargar_historial()
         print(arr_historial)
+
+## Jimmy Martínez - Carné No. 202302745
+## REPO - https://github.com/MegaGone/udv/blob/develop/fundamentos_I/final
