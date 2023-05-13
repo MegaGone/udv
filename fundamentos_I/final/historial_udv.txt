@@ -1,1 +1,3 @@
-{"JUGADOR": "test", "PALABRA": "test", "CATEGORÍA": "test", "ESTADO": "Adivinada", "FECHA": "2023-05-13 12:31:32"}
+{"JUGADOR": "hola", "PALABRA": "hola", "CATEGOR\u00cdA": "hola", "ESTADO": "Adivinada", "FECHA": "2023-05-13 13:08:07"}
+{"JUGADOR": "test", "PALABRA": "test", "CATEGOR\u00cdA": "test", "ESTADO": "Adivinada", "FECHA": "2023-05-13 13:09:13"}
+{"JUGADOR": "test", "PALABRA": "test", "CATEGOR\u00cdA": "test", "ESTADO": "Adivinada", "FECHA": "2023-05-13 13:09:40"}

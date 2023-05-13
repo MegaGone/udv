@@ -11,7 +11,8 @@ from helpers.functions import (
     limpiar_consola, 
     mostrar_figura, 
     obtener_jugador,
-    crear_registro
+    crear_registro,
+    cargar_historial
 )
 
 while True:
@@ -54,9 +55,15 @@ while True:
                 break
 
     elif int_opcion == 2:
+        limpiar_consola()
         print("GRACIAS POR JUGAR!")
+        print("JIMMY MARTINEZ - 202302745")
         input("PRESIONE ENTER PARA CERRAR EL PROGRAMA...")
         sys.exit()
 
     elif int_opcion == 3:
         limpiar_consola()
+
+    elif int_opcion == 4:
+        arr_historial = cargar_historial()
+        print(arr_historial)

@@ -3,17 +3,19 @@ import re
 import os
 import datetime
 import json
+from prettytable import PrettyTable
 
 def mostrar_menu():
     print("******************* AHORCADO UDV *******************")
     print("1. INICIAR UNA NUEVA PARTIDA")
     print("2. SALIR DEL JUEGO")
     print("3. LIMPIAR CONSOLA")
+    print("4. VER HISTORIAL DE JUEGOS")
     print("****************************************************")
 
     try:
         int_option = int(input("SELECCIONE UNA OPCIÓN: "))
-        if int_option > 0 and int_option < 4:
+        if int_option > 0 and int_option < 5:
             return int_option
         else:
             print("[ERROR] LA OPCIÓN SELECCIONADA NO ES VÁLIDA.\n")
@@ -165,9 +167,27 @@ def crear_registro(str_nombre_jugador, str_palabra, str_categoria, bool_palabra_
         "ESTADO": "Adivinada" if bool_palabra_adivinada else "No Adivinada",
         "FECHA": fecha_hora_actual.strftime("%Y-%m-%d %H:%M:%S")
     }
-
     guardar_registro(obj_registro)
 
 def guardar_registro(obj_registro):
-    with open("historial_udv.txt", "w", encoding="utf-8") as archivo:
-        archivo.write(json.dumps(obj_registro, ensure_ascii=False))
+    if os.path.exists("historial_udv.txt"):
+        modo_apertura = "a"
+    else:
+        modo_apertura = "w"
+    with open("historial_udv.txt", modo_apertura, encoding="utf-8") as archivo:
+        json.dump(obj_registro, archivo)
+        archivo.write("\n")
+
+def cargar_historial():
+    arr_registros = []
+    with open("historial_udv.txt", "r", encoding="utf-8") as archivo:
+        lineas = archivo.readlines()
+        for linea in lineas:
+            registro = json.loads(linea)
+            arr_registros.append(registro)
+    
+    str_table = PrettyTable(['JUGADOR', 'PALABRA', 'CATEGORÍA', 'ESTADO', 'FECHA'])
+    for registro in arr_registros:
+        str_table.add_row([registro['JUGADOR'], registro['PALABRA'], registro['CATEGORÍA'], registro['ESTADO'], registro['FECHA']])
+
+    return str_table
