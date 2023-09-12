@@ -11,3 +11,6 @@ wolf.roar()
 # CUSTOM FUNCTIONS
 lion.purr()
 wolf.howl()
+
+## Jimmy Martínez - Carné No. 202302745
+## Repo - https://github.com/MegaGone/udv/blob/develop/fundamentos_II/02_inheritance/
