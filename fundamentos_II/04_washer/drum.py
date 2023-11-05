@@ -1,3 +1,4 @@
+# Clase encargada de manejar las operaciones relacionadas con el tambor.
 class Drum:
     def __init__(self):
         self.clothes = []

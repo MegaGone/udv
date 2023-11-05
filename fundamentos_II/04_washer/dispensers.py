@@ -1,3 +1,4 @@
+# Clase encargada de manejar los dispensadores de detergente y blanqueador.
 class Dispensers:
     def __init__(self):
         self.detergent_level = 0

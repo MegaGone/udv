@@ -4,6 +4,9 @@ from drum import Drum
 from water_pump import WaterPump
 from dispensers import Dispensers
 
+# Clase encargada de maneja las funcionalidades generales de la lavadora. Implementa las clases que realizan procesos específicos aplicando
+# el principio de Responsabilidad Única y el principio de Abierto para su extensión y Cerrado para la modificación de funcionalidades
+# existentes en las clases existentes.
 class WashingMachine:
     def __init__(self):
         self.control_panel = ControlPanel()
@@ -12,6 +15,8 @@ class WashingMachine:
         self.water_pump = WaterPump()
         self.dispensers = Dispensers()
 
+    # Aquí se ubican todos los métodos existentes en la clase WashingMachine.
+    # Iniciar lavado, detener lavado, ..etc
     def start_wash(self, detergent_amount, bleach_amount):
         self.connect_power_source()
         self.motor.rotate_drum()

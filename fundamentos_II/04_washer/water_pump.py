@@ -1,3 +1,4 @@
+# Clase encargada de manejar las operaciones relacionadas con la bomba de agua.
 class WaterPump:
     def __init__(self):
         self.clean_water_level = 0

@@ -1,3 +1,4 @@
+# Clase encargada de manejar los programas de lavado, la temperatura del agua y la duración del ciclo.
 class ControlPanel:
     def __init__(self):
         self.wash_programs = []
