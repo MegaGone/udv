@@ -10,7 +10,7 @@ for i in range(5):
             elemento = int(input(f"Ingrese el a apilar: "))
             pila.apilar(elemento)
 
-            # DESAPILAMOS CUANDO LOS ELEMENTOS SEAN MAYOR A 3
+            # DESAPILAMOS CUANDO LA CANTIDAD DE ELEMENTOS SEA MAYOR A TRES
             if len(pila.elementos) > 3:
                 pila.desapilar()
             break
