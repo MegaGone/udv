@@ -1,5 +1,9 @@
 import java.util.Stack;
 
+// Jimmy Martínez - Carnet No. 202302745
+// Repo - https://github.com/MegaGone/udv/blob/develop/estructuras/IX_pila/
+// NOTA: Ejecutar con el comando java Aritmetica
+
 public class Aritmetica {
 
     private static final String OPERADORES = "+-*/";
