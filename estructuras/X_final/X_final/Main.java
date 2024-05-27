@@ -9,7 +9,7 @@ public class Main {
 
         for (String infija : expresionesInfijas) {
             try {
-                String postfija = InfixToPostfix.convert(infija);
+                String postfija = Conversor.convertir(infija);
                 ExpressionTree arbol = new ExpressionTree(postfija);
                 double resultado = arbol.evaluate();
                 System.out.println("INFIJA: " + infija);
