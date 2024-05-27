@@ -1,6 +1,8 @@
 package X_final;
 
-import java.io.*;
+// Jimmy Martínez - Carnet No. 202302745
+// Repo - https://github.com/MegaGone/udv/blob/develop/estructuras/X_final/X_final/
+
 import java.util.*;
 
 public class Main {
@@ -10,8 +12,8 @@ public class Main {
         for (String infija : expresionesInfijas) {
             try {
                 String postfija = Conversor.convertir(infija);
-                ExpressionTree arbol = new ExpressionTree(postfija);
-                double resultado = arbol.evaluate();
+                ArbolDeExpresion arbol = new ArbolDeExpresion(postfija);
+                double resultado = arbol.evaluar();
                 System.out.println("INFIJA: " + infija);
                 System.out.println("POSTFIJA: " + postfija);
                 System.out.println("RESULTADO: " + resultado + "\n");
