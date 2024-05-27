@@ -30,8 +30,10 @@ public class ExpressionTree {
                 stack.push(new Node(token));
             }
         }
+
         if (stack.size() != 1) {
-            throw new IllegalArgumentException("Invalid expression: leftover operands in stack");
+            return;
+//            throw new IllegalArgumentException("Invalid expression: leftover operands in stack");
         }
         root = stack.pop();
     }
