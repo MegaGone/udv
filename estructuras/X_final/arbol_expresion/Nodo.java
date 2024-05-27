@@ -1,4 +1,4 @@
-package X_final;
+package arbol_expresion;
 
 public class Nodo {
     String valor;

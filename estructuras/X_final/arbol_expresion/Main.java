@@ -1,7 +1,7 @@
-package X_final;
+package arbol_expresion;
 
 // Jimmy Martínez - Carnet No. 202302745
-// Repo - https://github.com/MegaGone/udv/blob/develop/estructuras/X_final/X_final/
+// Repo - https://github.com/MegaGone/udv/blob/develop/estructuras/X_final/arbol_expresion/
 
 import java.util.*;
 
