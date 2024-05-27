@@ -5,26 +5,18 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        List<String> infixExpressions = new ArrayList<>();
-        try (BufferedReader br = new BufferedReader(new FileReader("expresiones.txt"))) {
-            String line;
-            while ((line = br.readLine()) != null) {
-                infixExpressions.add(line);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        List<String> infixExpressions = LectorArchivo.leerExpresiones("expresiones.txt");
 
         for (String infix : infixExpressions) {
             try {
                 String postfix = InfixToPostfix.convert(infix);
                 ExpressionTree tree = new ExpressionTree(postfix);
                 double result = tree.evaluate();
-                System.out.println("Infix: " + infix);
-                System.out.println("Postfix: " + postfix);
-                System.out.println("Result: " + result);
+                System.out.println("INFIJA: " + infix);
+                System.out.println("POSTFIJA: " + postfix);
+                System.out.println("RESULTADO: " + result + "\n");
             } catch (Exception e) {
-                System.out.println("Error processing expression: " + infix);
+                System.out.println("[ERROR] HA OCURRIDO UN ERROR AL PROCESAR LA EXPRESIÓN: " + infix);
                 e.printStackTrace();
             }
         }
