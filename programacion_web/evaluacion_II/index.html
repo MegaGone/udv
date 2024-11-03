@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon" />
+
+    <!--=============== REMIXICONS ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css"
+      crossorigin=""
+    />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Ferretería Corona</title>
+  </head>
+  <body>
+    <!--==================== ENCABEZADO ====================-->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="#" class="nav__logo">
+          <span class="nav__logo-circle">FC</span>
+
+          <span class="nav__logo-name">Ferretería Corona</span>
+        </a>
+
+        <div class="nav__menu" id="nav-menu">
+          <span class="nav__title">Menú</span>
+
+          <h3 class="nav__name">Ferretería Corona</h3>
+
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#home" class="nav__link active-link">Inicio</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#projects" class="nav__link">Productos</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#contact" class="nav__link nav__link-button"
+                >Realizar pedido</a
+              >
+            </li>
+
+          <!-- BOTÓN CERRAR MENÚ MÓVIL -->
+          <div class="nav__close" id="nav-close">
+            <i class="ri-close-line"></i>
+          </div>
+        </div>
+
+        <div class="nav__buttons">
+          <!-- MENÚ MÓVIL -->
+          <div class="nav__toggle" id="nav-toggle">
+            <i class="ri-menu-4-line"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+      <!--==================== INICIO ====================-->
+      <section class="home section" id="home">
+        <div class="home__container container grid">
+          <h1 class="home__name">Ferretería Corona</h1>
+
+          <div class="home__perfil">
+            <div class="home__image">
+              <img src="assets/logo.png" alt="image" class="home__img" />
+              <div class="home__shadow"></div>
+
+              <img src="assets/curved-arrow.svg" alt="" class="home__arrow" />
+
+              <div class="geometric-box"></div>
+            </div>
+          </div>
+
+          <div class="home__info">
+            <p class="home__description">
+              En <b>Ferretería Corona</b>, encuentras calidad y variedad en
+              herramientas para tus proyectos de construcción y reparación.
+              Rastrea tu pedido a través de nuestro WhatsApp:
+              <br />
+
+              <a
+                target="_blank"
+                href="https://api.whatsapp.com/send?phone=50222560002&text=Hola%20%F0%9F%98%80%2C%20quisiera%20conocer%20el%20estado%20de%20mi%20pedido."
+              >
+                <span class="contact-phone">+502 22560002</span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!--==================== PRODUCTOS ====================-->
+      <section class="projects section" id="projects">
+        <h2 class="section__title-1">
+          <span>Productos</span>
+        </h2>
+
+        <div class="projects__container container grid">
+          <article class="projects__card">
+            <div class="projects__image">
+              <img src="assets/pintura.jpg" alt="image" class="projects__img" />
+
+              <a onclick="onAddProduct(1)" class="projects__button button">
+                <i class="ri-add-line"></i>
+              </a>
+            </div>
+
+            <div class="projects__content">
+              <h3 class="projects__subtitle">
+                Pintura aceite dura blanco brillante 1/4 galón
+              </h3>
+              <h2 class="projects__title">Q 44.50</h2>
+            </div>
+          </article>
+
+          <article class="projects__card">
+            <div class="projects__image">
+              <img
+                src="assets/martillo.png"
+                alt="image"
+                class="projects__img"
+              />
+
+              <a onclick="onAddProduct(2)" class="projects__button button">
+                <i class="ri-add-line"></i>
+              </a>
+            </div>
+
+            <div class="projects__content">
+              <h3 class="projects__subtitle">Martillo mango de madera 16 oz</h3>
+              <h2 class="projects__title">Q 55.50</h2>
+            </div>
+          </article>
+
+          <article class="projects__card">
+            <div class="projects__image">
+              <img src="assets/taladro.png" alt="image" class="projects__img" />
+
+              <a onclick="onAddProduct(3)" class="projects__button button">
+                <i class="ri-add-line"></i>
+              </a>
+            </div>
+
+            <div class="projects__content">
+              <h3 class="projects__subtitle">
+                Taladro Lion De 18 V Handiworks
+              </h3>
+              <h2 class="projects__title">Q 250.00</h2>
+            </div>
+          </article>
+
+          <article class="projects__card">
+            <div class="projects__image">
+              <img src="assets/ventana.jpg" alt="image" class="projects__img" />
+
+              <a onclick="onAddProduct(4)" class="projects__button button">
+                <i class="ri-add-line"></i>
+              </a>
+            </div>
+
+            <div class="projects__content">
+              <h3 class="projects__subtitle">
+                Ventana de PVC serie 56, doble corrediza 1.50 x 1.00 m blanco
+              </h3>
+              <h2 class="projects__title">Q 665.00</h2>
+            </div>
+          </article>
+
+          <article class="projects__card">
+            <div class="projects__image">
+              <img
+                src="assets/escalera.jpg"
+                alt="image"
+                class="projects__img"
+              />
+
+              <a onclick="onAddProduct(5)" class="projects__button button">
+                <i class="ri-add-line"></i>
+              </a>
+            </div>
+
+            <div class="projects__content">
+              <h3 class="projects__subtitle">
+                Escalera extensión de aluminio 24 peldaños 19.4pies soporta
+                hasta 150kg
+              </h3>
+              <h2 class="projects__title">Q 1,525.00</h2>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!--==================== PEDIDO ====================-->
+      <section class="contact section" id="contact">
+        <div class="contact__container grid">
+          <div class="contact__data">
+            <h2 class="section__title-2">
+              <span>Confirmar pedido</span>
+            </h2>
+
+            <p class="contact__description-1">
+              Para continuar con tu pedido, por favor confirma tus datos para
+              coordinar la entrega.
+            </p>
+
+            <p class="contact__description-2">
+              Un asesor se comunicará contigo por correo electrónico o WhatsApp
+              para confirmar tu pedido y gestionar el pago.
+            </p>
+
+            <div class="geometric-box"></div>
+          </div>
+
+          <div class="contact__mail">
+            <h2 class="contact__title">Confirmar datos</h2>
+
+            <form action="" class="contact__form" id="contact-form">
+              <div class="contact__group">
+                <div class="contact__box">
+                  <input
+                    type="text"
+                    name="user_name"
+                    class="contact__input"
+                    id="name"
+                    required
+                    placeholder="Nombre completo"
+                  />
+                  <label for="name" class="contact__label"
+                    >Nombre completo</label
+                  >
+                </div>
+
+                <div class="contact__box">
+                  <input
+                    required
+                    id="email"
+                    type="email"
+                    name="user_email"
+                    class="contact__input"
+                    onblur="validateEmail()"
+                    placeholder="Correo electrónico"
+                  />
+                  <label for="email" class="contact__label"
+                    >Correo electrónico</label
+                  >
+                  <div id="email-error-message" class="error">
+                    Por favor, ingrese un correo electrónico válido.
+                  </div>
+                </div>
+              </div>
+
+              <div class="contact__group">
+                <div class="contact__box">
+                  <input
+                    required
+                    id="phone"
+                    type="text"
+                    name="phone"
+                    maxlength="8"
+                    class="contact__input"
+                    placeholder="Teléfono"
+                    onkeypress="return onlyNumbers(event)"
+                  />
+                  <label for="phone" class="contact__label">Teléfono</label>
+                  <div id="phone-error-message" class="error">
+                    Solo se permiten números del 0 al 9.
+                  </div>
+                </div>
+
+                <div class="contact__box">
+                  <select
+                    required
+                    id="payment"
+                    name="payment"
+                    class="contact__input"
+                  >
+                    <option value="pago_contra_entrega">
+                      Pago contra entrega
+                    </option>
+                    <option value="tarjeta">Tarjeta de débito/crédito</option>
+                    <option value="transferencia">
+                      Transferencia bancaria
+                    </option>
+                    <option value="visacuotas">Visacuotas</option>
+                  </select>
+                  <label for="payment" class="contact__label"
+                    >Forma de pago</label
+                  >
+                </div>
+              </div>
+
+              <div class="contact__box">
+                <input
+                  type="text"
+                  name="address"
+                  class="contact__input"
+                  id="address"
+                  required
+                  placeholder="Dirección de entrega"
+                />
+                <label for="address" class="contact__label"
+                  >Dirección de entrega</label
+                >
+              </div>
+
+              <div class="contact__box">
+                <select id="department" class="contact__input" required>
+                  <option value="" disabled selected>
+                    Seleccione el departamento
+                  </option>
+                </select>
+                <label for="department" class="contact__label"
+                  >Departamento</label
+                >
+              </div>
+
+              <div class="contact__group">
+                <div class="contact__box">
+                  <select id="municipality" class="contact__input" required>
+                    <option value="" disabled selected>Municipio</option>
+                  </select>
+                  <label for="municipality" class="contact__label"
+                    >Municipio</label
+                  >
+                </div>
+
+                <div class="contact__box">
+                  <input
+                    id="zone"
+                    required
+                    type="text"
+                    name="zone"
+                    placeholder="Zona"
+                    class="contact__input"
+                  />
+                  <label for="zone" class="contact__label">Zona</label>
+                </div>
+              </div>
+
+              <div class="contact__box">
+                <input
+                  required
+                  id="date_time"
+                  name="date_time"
+                  type="datetime-local"
+                  class="contact__input"
+                  placeholder="Fecha y hora para la entrega"
+                />
+                <label for="date_time" class="contact__label"
+                  >Fecha y hora para la entrega</label
+                >
+                <div id="date-time-error-message" class="error">
+                  Por favor, selecciona una fecha y hora futuras.
+                </div>
+              </div>
+
+              <hr />
+              <h2 class="contact__title">Detalle de compra</h2>
+              <div id="purchase-details" class="product__list"></div>
+
+              <p class="contact__message" id="contact-message"></p>
+
+              <button type="submit" class="contact__button button">
+                <i class="ri-send-plane-line"></i> Confirmar pedido
+              </button>
+            </form>
+          </div>
+
+          <div class="contact__social">
+            <img
+              src="assets/curved-arrow.svg"
+              alt=""
+              class="contact__social-arrow"
+            />
+
+            <div class="contact__social-data">
+              <div>
+                <p class="contact__social-description-1">Contáctanos</p>
+
+                <p class="contact__social-description-2">
+                  Síguenos en nuestras redes sociales.
+                </p>
+              </div>
+
+              <div class="contact__social-links">
+                <a
+                  href="https://www.facebook.com/UDVGT1/?locale=es_LA"
+                  class="contact__social-link"
+                  target="_blank"
+                >
+                  <i class="ri-facebook-circle-line"></i>
+                </a>
+
+                <a
+                  href="https://www.instagram.com/udvgt/?hl=es"
+                  class="contact__social-link"
+                  target="_blank"
+                >
+                  <i class="ri-instagram-line"></i>
+                </a>
+
+                <a
+                  href="https://www.linkedin.com/school/universidaddavincideguatemala/posts/?feedView=all"
+                  class="contact__social-link"
+                  target="_blank"
+                >
+                  <i class="ri-linkedin-box-line"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer">
+      <div class="footer__container container grid">
+        <ul class="footer__links">
+          <li>
+            <a href="#home" class="footer__link">Inicio</a>
+          </li>
+
+          <li>
+            <a href="#projects" class="footer__link">Productos</a>
+          </li>
+        </ul>
+
+        <span class="footer__copy">
+          &#169; Derechos reservados.
+          <a href="#">Universidad Da Vinci de Guatemala.</a>
+        </span>
+      </div>
+    </footer>
+
+    <!--========== LIMPIAR PRODUCTOS ==========-->
+    <a class="scrollup" id="scroll-up" onclick="onCleanProducts()">
+      <i class="ri-delete-bin-line"></i>
+    </a>
+
+    <!--=============== SCROLLREVEAL (LIBRERÍA DE TERCEROS PARA ANIMACIÓN) ===============-->
+    <script src="js/scrollreveal.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="main.js"></script>
+  </body>
+</html>
